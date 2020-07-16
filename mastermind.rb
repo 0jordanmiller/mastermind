@@ -116,16 +116,13 @@ def start_game
                  make_break_code('Create a code for the opponent to break')
                end
   puts 'Try and break the code. Input four colors, Red, Green, Blue, Yellow, White, Purple. Sample input: RGBY. '
-  print maker_code
   while turn < 10 && winner == false
-    print "\nPlease guess: "
     make_break_code = make_break_code('Please guess a combination of 4 colors: ')
     winner = maker_code == make_break_code
     break if winner == true
 
     guesses.push([make_break_code, feedback(maker_code, make_break_code)])
     print_board(guesses, peg_order)
-    p guesses
     turn += 1
   end
   print 'Winner!' if winner == true

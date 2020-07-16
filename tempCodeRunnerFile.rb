@@ -1,2 +1,1 @@
-
-start_game
+    print "\nPlease guess: "
